@@ -1,0 +1,27 @@
+# Moon Phase
+
+I wonder if it's a full moon tonight?
+
+### ToDo
+
+**Data**
+
+- [ ] Find a data source or API with moon phase data
+
+**View**
+
+- [ ] Design the app view
+
+**API call**
+
+- [ ] Create the URL
+- [ ] URL Request
+- [ ] URL data task
+- [ ] Model the response, Codable
+- [ ] JSON decode the response
+
+**XCode project**
+
+- [ ] Delete storyboard
+- [ ] Create MoonPhaseViewController programmatically
+- [ ] Use Result.success from network call and display information to view controller
