@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		3D6D41CE262950850074AF9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6D41CD262950850074AF9F /* AppDelegate.swift */; };
 		3D6D41D0262950850074AF9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6D41CF262950850074AF9F /* SceneDelegate.swift */; };
-		3D6D41D2262950850074AF9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6D41D1262950850074AF9F /* ViewController.swift */; };
-		3D6D41D5262950850074AF9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D6D41D3262950850074AF9F /* Main.storyboard */; };
+		3D6D41D2262950850074AF9F /* MoonPhaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6D41D1262950850074AF9F /* MoonPhaseViewController.swift */; };
 		3D6D41D7262950860074AF9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D6D41D6262950860074AF9F /* Assets.xcassets */; };
 		3D6D41DA262950860074AF9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D6D41D8262950860074AF9F /* LaunchScreen.storyboard */; };
 		3D6D41E5262950870074AF9F /* MoonPhaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6D41E4262950870074AF9F /* MoonPhaseTests.swift */; };
@@ -38,8 +37,7 @@
 		3D6D41CA262950850074AF9F /* MoonPhase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoonPhase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D6D41CD262950850074AF9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D6D41CF262950850074AF9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3D6D41D1262950850074AF9F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3D6D41D4262950850074AF9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3D6D41D1262950850074AF9F /* MoonPhaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonPhaseViewController.swift; sourceTree = "<group>"; };
 		3D6D41D6262950860074AF9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D6D41D9262950860074AF9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D6D41DB262950860074AF9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,8 +99,7 @@
 			children = (
 				3D6D41CD262950850074AF9F /* AppDelegate.swift */,
 				3D6D41CF262950850074AF9F /* SceneDelegate.swift */,
-				3D6D41D1262950850074AF9F /* ViewController.swift */,
-				3D6D41D3262950850074AF9F /* Main.storyboard */,
+				3D6D41D1262950850074AF9F /* MoonPhaseViewController.swift */,
 				3D6D41D6262950860074AF9F /* Assets.xcassets */,
 				3D6D41D8262950860074AF9F /* LaunchScreen.storyboard */,
 				3D6D41DB262950860074AF9F /* Info.plist */,
@@ -233,7 +230,6 @@
 			files = (
 				3D6D41DA262950860074AF9F /* LaunchScreen.storyboard in Resources */,
 				3D6D41D7262950860074AF9F /* Assets.xcassets in Resources */,
-				3D6D41D5262950850074AF9F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D6D41D2262950850074AF9F /* ViewController.swift in Sources */,
+				3D6D41D2262950850074AF9F /* MoonPhaseViewController.swift in Sources */,
 				3D6D41CE262950850074AF9F /* AppDelegate.swift in Sources */,
 				3D6D41D0262950850074AF9F /* SceneDelegate.swift in Sources */,
 			);
@@ -296,14 +292,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3D6D41D3262950850074AF9F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3D6D41D4262950850074AF9F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3D6D41D8262950860074AF9F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
