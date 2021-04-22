@@ -25,3 +25,11 @@ I wonder if it's a full moon tonight?
 - [ ] Delete storyboard
 - [ ] Create MoonPhaseViewController programmatically
 - [ ] Use Result.success from network call and display information to view controller
+
+#### Resources
+
+- [Calculating moon phase for a date](https://minkukel.com/en/various/calculating-moon-phase/) *(minkukel.com)*
+
+
+#### Done
+- [x] Remove storyboard 
