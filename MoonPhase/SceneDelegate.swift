@@ -16,7 +16,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     window = UIWindow(frame: windowScene.coordinateSpace.bounds)
     window?.windowScene = windowScene
     let rootViewController = MoonPhaseViewController()
-    rootViewController.view.backgroundColor = .purple
     window?.rootViewController = rootViewController
     window?.makeKeyAndVisible()
   }
