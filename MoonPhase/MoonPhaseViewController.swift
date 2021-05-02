@@ -1,16 +1,15 @@
 // Created by Manuel Lopez on 4/15/21.
-// Copyright © 2021 Airbnb Inc. All rights reserved.
 
 import UIKit
 
 class MoonPhaseViewController: UIViewController {
 
   // MARK: Properties
-  let moonPhase: MoonPhase
+  let moonPhasesStore: MoonPhasesStore
   let collectionView: UICollectionView
 
-  init() {
-    moonPhase = MoonPhase()
+  init(store: MoonPhasesStore) {
+    moonPhasesStore = store
     collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
 
     super.init(nibName: nil, bundle: nil)
@@ -34,10 +33,34 @@ class MoonPhaseViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
-    collectionView.backgroundColor = .red
-    print(moonPhase.currentDays)
-  }
+    collectionView.dataSource = self
+    collectionView.delegate = self
+    collectionView.register(MoonPhaseViewCell.self, forCellWithReuseIdentifier: MoonPhaseViewCell.cellReuseID)
 
+    collectionView.backgroundColor = #colorLiteral(red: 0.1254901961, green: 0.1254901961, blue: 0.1254901961, alpha: 1)
+  }
 
 }
 
+extension MoonPhaseViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    
+    return moonPhasesStore.allMoonPhases.count
+  }
+
+  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MoonPhaseViewCell.cellReuseID, for: indexPath) as! MoonPhaseViewCell
+
+    let moonPhase = moonPhasesStore.allMoonPhases[indexPath.row]
+    cell.configure(moonPhase: moonPhase)
+    return cell
+  }
+
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+
+    return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+  }
+
+}
