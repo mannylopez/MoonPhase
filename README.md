@@ -33,3 +33,6 @@ I wonder if it's a full moon tonight?
 
 #### Done
 - [x] Remove storyboard 
+
+#### Notes
+- Fix force unwrap with https://stackoverflow.com/questions/61646137/no-exact-matches-in-call-to-initializer-error-message-in-swift
