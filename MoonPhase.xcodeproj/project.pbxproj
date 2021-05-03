@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3D2D19592630FDBB00BE515B /* MoonPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2D19582630FDBB00BE515B /* MoonPhase.swift */; };
+		3D2D198426368D2F00BE515B /* MoonPhaseViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2D198326368D2F00BE515B /* MoonPhaseViewCell.swift */; };
 		3D6D41CE262950850074AF9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6D41CD262950850074AF9F /* AppDelegate.swift */; };
 		3D6D41D0262950850074AF9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6D41CF262950850074AF9F /* SceneDelegate.swift */; };
 		3D6D41D2262950850074AF9F /* MoonPhaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6D41D1262950850074AF9F /* MoonPhaseViewController.swift */; };
@@ -15,6 +16,7 @@
 		3D6D41DA262950860074AF9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D6D41D8262950860074AF9F /* LaunchScreen.storyboard */; };
 		3D6D41E5262950870074AF9F /* MoonPhaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6D41E4262950870074AF9F /* MoonPhaseTests.swift */; };
 		3D6D41F0262950870074AF9F /* MoonPhaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6D41EF262950870074AF9F /* MoonPhaseUITests.swift */; };
+		3DC427912637ABBB00929936 /* MoonPhasesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC427902637ABBB00929936 /* MoonPhasesStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		3D2D19582630FDBB00BE515B /* MoonPhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonPhase.swift; sourceTree = "<group>"; };
+		3D2D198326368D2F00BE515B /* MoonPhaseViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonPhaseViewCell.swift; sourceTree = "<group>"; };
 		3D6D41CA262950850074AF9F /* MoonPhase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoonPhase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D6D41CD262950850074AF9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D6D41CF262950850074AF9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +52,7 @@
 		3D6D41EB262950870074AF9F /* MoonPhaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoonPhaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D6D41EF262950870074AF9F /* MoonPhaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonPhaseUITests.swift; sourceTree = "<group>"; };
 		3D6D41F1262950870074AF9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DC427902637ABBB00929936 /* MoonPhasesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonPhasesStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				3D6D41CF262950850074AF9F /* SceneDelegate.swift */,
 				3D6D41D1262950850074AF9F /* MoonPhaseViewController.swift */,
 				3D2D19582630FDBB00BE515B /* MoonPhase.swift */,
+				3D2D198326368D2F00BE515B /* MoonPhaseViewCell.swift */,
+				3DC427902637ABBB00929936 /* MoonPhasesStore.swift */,
 				3D6D41D6262950860074AF9F /* Assets.xcassets */,
 				3D6D41D8262950860074AF9F /* LaunchScreen.storyboard */,
 				3D6D41DB262950860074AF9F /* Info.plist */,
@@ -259,8 +265,10 @@
 			files = (
 				3D2D19592630FDBB00BE515B /* MoonPhase.swift in Sources */,
 				3D6D41D2262950850074AF9F /* MoonPhaseViewController.swift in Sources */,
+				3DC427912637ABBB00929936 /* MoonPhasesStore.swift in Sources */,
 				3D6D41CE262950850074AF9F /* AppDelegate.swift in Sources */,
 				3D6D41D0262950850074AF9F /* SceneDelegate.swift in Sources */,
+				3D2D198426368D2F00BE515B /* MoonPhaseViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

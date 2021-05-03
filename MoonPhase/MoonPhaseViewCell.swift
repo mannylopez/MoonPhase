@@ -7,6 +7,15 @@ class MoonPhaseViewCell: UICollectionViewCell {
   // MARK: Properties
   static var cellReuseID: String { "MoonPhaseViewCell" }
 
+  var stackView: UIStackView
+
+  let dateLabel: UILabel = {
+    let moonPhaseLabel = UILabel(frame: .zero)
+    moonPhaseLabel.textColor = .white
+    moonPhaseLabel.textAlignment = .center
+    return moonPhaseLabel
+  }()
+
   let moonPhaseLabel: UILabel = {
     let moonPhaseLabel = UILabel(frame: .zero)
     moonPhaseLabel.textColor = .white
@@ -30,29 +39,23 @@ class MoonPhaseViewCell: UICollectionViewCell {
 
   // MARK: - INITIALIZER
   override init(frame: CGRect) {
+    stackView = UIStackView(arrangedSubviews: [dateLabel, moonPhaseLabel, emojiLabel, moonDayLabel])
+    stackView.axis = .vertical
+    stackView.distribution = .fillEqually
+    stackView.alignment = .fill
+
+
     super.init(frame: frame)
 
     let margins = layoutMarginsGuide
 
-    contentView.addSubview(moonPhaseLabel)
-    moonPhaseLabel.translatesAutoresizingMaskIntoConstraints = false
-    moonPhaseLabel.topAnchor.constraint(equalTo: margins.topAnchor).isActive = true
-    moonPhaseLabel.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
-    moonPhaseLabel.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
+    contentView.addSubview(stackView)
 
-    contentView.addSubview(emojiLabel)
-    emojiLabel.translatesAutoresizingMaskIntoConstraints = false
-    emojiLabel.topAnchor.constraint(equalTo: moonPhaseLabel.bottomAnchor).isActive = true
-    emojiLabel.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
-    emojiLabel.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
-    emojiLabel.bottomAnchor.constraint(equalTo: margins.centerYAnchor).isActive = true
-
-    contentView.addSubview(moonDayLabel)
-    moonDayLabel.translatesAutoresizingMaskIntoConstraints = false
-    moonDayLabel.topAnchor.constraint(equalTo: emojiLabel.bottomAnchor).isActive = true
-    moonDayLabel.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
-    moonDayLabel.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
-    moonDayLabel.bottomAnchor.constraint(equalTo: margins.bottomAnchor).isActive = true
+    stackView.translatesAutoresizingMaskIntoConstraints = false
+    stackView.topAnchor.constraint(equalTo: margins.topAnchor).isActive = true
+    stackView.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
+    stackView.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
+    stackView.bottomAnchor.constraint(equalTo: margins.bottomAnchor).isActive = true
   }
 
   required init?(coder: NSCoder) {
@@ -61,6 +64,7 @@ class MoonPhaseViewCell: UICollectionViewCell {
 
   func configure(moonPhase: MoonPhase) {
     moonPhaseLabel.text = moonPhase.phaseOfMoonLabel
+    dateLabel.text = moonPhase.dateFormatter.string(from: moonPhase.dateNow)
     emojiLabel.text = moonPhase.moonEmojiLabel
     moonDayLabel.text = String(moonPhase.currentDays)
   }
